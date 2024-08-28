@@ -23,7 +23,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <string>
+#include "swo-debug.hpp"
+#include <cstdint>
 
 /* USER CODE END Includes */
 
@@ -90,6 +91,20 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+
+  int value_int = 1234;
+  swoTerminal << "int: " << value_int << std::endl;
+  swoTerminal << "int (hex): " << std::hex << value_int << std::endl;
+
+  long value_long = 12345676;
+  swoTerminal << "long: " << value_long << std::endl;
+  swoTerminal << "long (hex): " << std::hex << value_long << std::endl;
+
+  bool value_bool = true;
+  swoTerminal << "bool: " << value_bool << std::endl;
+
+  float value_float = 12.456;
+  swoTerminal << "float: " << value_float << std::endl;
 
   /* USER CODE END 2 */
 
